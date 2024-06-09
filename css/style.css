@@ -72,6 +72,10 @@ ul {
     letter-spacing: 0.03em;
     /* margin-right: 76px; */
     text-align: center;
+
+/* for mob menu + */
+    padding-top: 18px;
+    padding-bottom: 18px;
 } 
 
 
@@ -84,6 +88,8 @@ ul {
 .nav-list {
     display: flex;
     gap: 40px;
+    display: none;
+    /* // */
 }
 
 .nav-list-item {
@@ -128,6 +134,8 @@ a.nav-list-item:hover::after {
 .adress {
     font-style: normal;
     margin-left: auto;
+    display: none;
+    /* // */
 }
 
 .adress-list {
@@ -149,9 +157,14 @@ a.nav-list-item:hover::after {
 }
 
 
+.menu-open-btn {
+    position: relative;
+    margin-left: auto;
+}
 
-
-
+.icon-mob-menu {
+    position: absolute;
+}
 
 
 
@@ -168,12 +181,26 @@ a.nav-list-item:hover::after {
 
     background: 
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-        url(../images/herob.jpg);
+        url(../images/herob-mob.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+
+    .main-page {
+        background: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/herob-mob-2x.jpg);
+    }
+
+}
+     
+
 
 
 .title-text {
@@ -335,6 +362,7 @@ a.nav-list-item:hover::after {
 
 /* our-team */
 
+
 .our-team {
     background-color: #F4F4FD;
     /* padding-top: 120px;
@@ -355,6 +383,10 @@ a.nav-list-item:hover::after {
     text-transform: capitalize;
     letter-spacing: 0.02em;
     margin-bottom: 72px;
+}
+
+.our-team-img {
+    flex-shrink: 0;
 }
 
 .our-team-list {
@@ -491,6 +523,10 @@ a.nav-list-item:hover::after {
    padding: 32px 16px;
    border: 1px solid #e7e9fc;
    border-top: none;
+}
+
+.container-portfolio-image {
+    flex-shrink: 0;
 }
 
 .portfolio-item-title {
@@ -1003,6 +1039,24 @@ footer {
     padding: 112px 0;
 }
 
+.main-page {
+    background: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/herob-tab.jpg);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+
+    .main-page {
+        background: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/herob-tab-2x.jpg);
+    }
+
+}
+
 .title-text {
     font-size: 56px;
     line-height: 1.07;
@@ -1123,6 +1177,25 @@ footer {
 }
 
 /* hero */
+
+
+.main-page {
+    background: 
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/herob.jpg);
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+
+    .main-page {
+        background: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/herob-2x.jpg);
+    }
+}
 
 .container {
     max-width: 1158px;
