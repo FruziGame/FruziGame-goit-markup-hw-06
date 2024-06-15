@@ -160,21 +160,22 @@ a.nav-list-item:hover::after {
 
 
 .menu-open-btn {
-    position: relative;
+
+    /* padding-top: 16px; */
     margin-left: auto;
+    border: none;
+    background-color: transparent;
 }
 
 .icon-mob-menu {
-    position: absolute;
-    right: -50%;
-    transform: translateY(-50%);
+    
 }
+
 
 
 
 .mob-menu {
-    padding-left: 16px;
-    padding-right: 16px;
+    z-index: 999;
     background-color: #FFFFFF;
     width: 100%;
     height: 100%;
@@ -188,6 +189,7 @@ a.nav-list-item:hover::after {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    padding: 72px 16px 40px 16px;
 }
 
 .mob-menu.be-open {
@@ -198,7 +200,6 @@ a.nav-list-item:hover::after {
 
 
 .mob-nav-list {
-    padding-top: 72px;
 }
 
 .mob-list-item {
@@ -235,6 +236,7 @@ a.nav-list-item:hover::after {
 
     display: block;
     margin-bottom: 24px;
+    font-style: none;
 }
 
 .mob-menu-phone {
@@ -253,8 +255,8 @@ a.nav-list-item:hover::after {
 
 .main-page {
     /* после добавления max width улетела картинка влево  */
-    max-width: 1440px;
-    width: 100%;
+    /* max-width: 1440px;
+    width: 100%; */
 
     /* padding: 188px 0; */
     padding: 72px 0;
@@ -450,6 +452,11 @@ a.nav-list-item:hover::after {
 
     padding-top: 96px;
     padding-bottom: 96px;
+}
+
+
+.our-team-container {
+    width: 296px;
 }
 
 .our-team-title {
@@ -677,6 +684,7 @@ footer {
 .footer-container-logo {
     /* margin-right: 120px; */
     text-align: center;
+    margin-bottom: 72px;
 }
 
 
@@ -690,7 +698,6 @@ footer {
 
     /* max-width: 264px; */
     min-width: 288px;
-    margin-bottom: 72px;
 }
 
 .footer-text.soc {
@@ -716,6 +723,7 @@ footer {
 .footer-container-soc {
     /* margin-right: 80px; */
     text-align: center ;
+    margin-bottom: 72px;
 }
 
 .footer-icon-list {
@@ -726,7 +734,6 @@ footer {
     /*  */
     align-content: center;
     justify-content: center;
-    margin-bottom: 72px;
 }
 
 .footer-icon-item {
@@ -878,29 +885,27 @@ footer {
 }
 
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
+        background-color: #FCFCFC;
+        border-radius: 4px;
+        box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }   
 
-    padding: 72px 24px 24px 24px;
-    width: 408px;
-    min-height: 584px; 
-    /* mob-below */
-    padding: 72px 16px 24px 16px;
-    width: 288px;
-    min-height: 623px; 
+    @media screen and (max-width: 767px) {
+        .modal {
+            padding: 72px 16px 24px 16px;
+            max-width: 288px;
+            min-height: 623px; 
+        }
 
+    }
 
-
-
-    background-color: #FCFCFC;
-    border-radius: 4px;
-    box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}   
 
 
 .btnx {
@@ -1053,6 +1058,10 @@ footer {
 }
 
 .policy-container {
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
     margin-bottom: 24px; 
 }
 
@@ -1087,10 +1096,11 @@ footer {
     fill: transparent;
 }
 
+
+
 .policy-link {
+
     color: #4D5AE5;
-    /*  */
-        padding-left: 19px;
 }
 
 .modal-btn {
@@ -1206,7 +1216,7 @@ footer {
 .we-provide-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; 
+    gap: 72px 24px; 
 }
 
 .we-provide-title {
@@ -1222,6 +1232,10 @@ footer {
 
 
 /* our team */
+
+.our-team-container {
+    width: auto;
+}
 
 .our-team-list {
     display: flex; 
@@ -1261,6 +1275,11 @@ footer {
 
 .footer-container-logo {
     text-align: start;
+    margin-bottom: 0;
+}
+
+.footer-container-soc {
+    margin-bottom: 0;
 }
 
 .footer-text {
@@ -1281,6 +1300,7 @@ footer {
     display: flex;
     gap: 24px;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 .sub-form {
@@ -1321,9 +1341,7 @@ footer {
 
 @media (min-width: 1158px) {
 
-    .footer-wrap {
-        gap: 0;
-}
+    
 
 
 
@@ -1382,7 +1400,10 @@ footer {
 }
  
 .main-page {
-     padding: 188px 0;
+    
+    max-width: 1440px;
+    width: 100%;
+    padding: 188px 0;
 }
 
 .title-text {
@@ -1474,6 +1495,11 @@ footer {
 
 
 /* -------footer------ */
+
+.footer-wrap {
+    gap: 0;
+    margin-bottom: 0;
+}
 
 footer {
     padding-top: 100px;
